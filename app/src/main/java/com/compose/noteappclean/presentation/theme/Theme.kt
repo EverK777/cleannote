@@ -1,4 +1,4 @@
-package com.compose.noteappclean.ui.theme
+package com.compose.noteappclean.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
