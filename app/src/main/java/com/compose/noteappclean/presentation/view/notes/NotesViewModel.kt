@@ -53,7 +53,7 @@ class NotesViewModel @Inject constructor(
                 }
             }
             is NotesEvent.ToggleOrderSection ->{
-                _state.value = state.value.copy(isOrderSectionVisible =  !state.value.isOrderSectionVisible)
+                _state.value = state.value.copy(isOrderSectionVisible = !state.value.isOrderSectionVisible)
             }
         }
     }
@@ -68,5 +68,4 @@ class NotesViewModel @Inject constructor(
                 )
             }.launchIn(viewModelScope)
     }
-
 }
