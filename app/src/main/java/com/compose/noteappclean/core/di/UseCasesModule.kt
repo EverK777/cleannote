@@ -1,10 +1,7 @@
 package com.compose.noteappclean.core.di
 
 import com.compose.noteappclean.core.domain.repository.NoteRepository
-import com.compose.noteappclean.core.use_case.AddNote
-import com.compose.noteappclean.core.use_case.DeleteNote
-import com.compose.noteappclean.core.use_case.GetNotes
-import com.compose.noteappclean.core.use_case.NoteUseCases
+import com.compose.noteappclean.core.use_case.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +15,11 @@ object UseCasesModule {
     @Provides
     @Singleton
     fun providesNoteUseCases(repository: NoteRepository) : NoteUseCases {
-        return NoteUseCases(GetNotes(repository), DeleteNote((repository)) , AddNote(repository = repository))
+        return NoteUseCases(
+            GetNotes(repository),
+            DeleteNote((repository)) ,
+            AddNote(repository = repository),
+            GetNote(repository = repository)
+        )
     }
 }
