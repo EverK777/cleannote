@@ -33,5 +33,4 @@ class GetNotes @Inject constructor(
             }
         }
     }
-
 }
